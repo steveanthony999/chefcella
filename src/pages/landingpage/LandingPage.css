@@ -1,0 +1,118 @@
+.LandingPage {
+  width: 100vw;
+  height: 100vh;
+  background: url('../../assets/splash.jpg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+}
+
+.LandingPage::after {
+  content: '';
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.LandingPage-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.LandingPage-main-logo {
+  width: 600px;
+}
+
+.LandingPage-secondary-logo {
+  width: 400px;
+  margin-top: -100px;
+}
+
+.LandingPage-h4 {
+  margin-top: -240px;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: normal;
+}
+
+.LandingPage-input-container div {
+  width: 400px;
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.LandingPage-input-container div input {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+}
+
+.LandingPage-input-container div input:focus {
+  outline: none;
+}
+
+.LandingPage-input-container div button {
+  background: orange;
+  padding: 1rem;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.LandingPage-input-container div button:focus {
+  outline: none;
+}
+
+.LandingPage-input-container div div {
+  position: absolute;
+  top: 2rem;
+  left: 25%;
+  color: white !important;
+}
+
+@media screen and (max-width: 738px) {
+  .LandingPage {
+    background: url('../../assets/tacos.png') no-repeat center center/cover;
+    overflow: hidden;
+  }
+
+  .LandingPage-main-logo {
+    width: calc(100% - 48px);
+  }
+
+  .LandingPage-secondary-logo {
+    width: calc(100% - 60px);
+    margin-top: -60px;
+  }
+
+  .LandingPage-h4 {
+    width: calc(100% - 72px);
+    margin-top: -200px;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .LandingPage-input-container div {
+    padding: 2rem;
+    margin-top: 40px;
+    flex-direction: column;
+  }
+
+  .LandingPage-input-container div button {
+    width: 100%;
+    margin-top: 16px;
+  }
+
+  .LandingPage-input-container div div {
+    top: 6rem;
+    left: 0;
+  }
+}
